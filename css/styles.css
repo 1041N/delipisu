@@ -1,0 +1,423 @@
+/* Base Styles */
+:root {
+    --dark-navy: #2C3E50;
+    --white: #FFFFFF;
+    --pastel-pink: #F8C1CC;
+    --teal: #1ABC9C;
+    --yellow: #F1C40F;
+    --mint-green: #A9DFBF;
+    --coral: #FF6F61;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--dark-navy);
+    color: var(--white);
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    font-weight: 700;
+}
+
+h1 {
+    font-size: 36px;
+}
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+a {
+    color: var(--white);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--pastel-pink);
+}
+
+section {
+    padding: 80px 10%;
+}
+
+.columns {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.column {
+    flex: 1;
+    min-width: 300px;
+    padding: 20px;
+    text-align: center;
+    margin: 10px;
+    transition: transform 0.3s ease;
+}
+
+.column:hover {
+    transform: translateY(-5px);
+}
+
+/* Header Styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
+    background-color: var(--dark-navy);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.logo-deli {
+    color: var(--white);
+}
+
+.logo-pisu {
+    color: var(--pastel-pink);
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 30px;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    background: linear-gradient(rgba(44, 62, 80, 0.7), rgba(44, 62, 80, 0.7)), url('../images/hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 60px;
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+.hero h1 {
+    margin-bottom: 20px;
+    font-size: 48px;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 40px;
+}
+
+.cta-button {
+    background-color: var(--pastel-pink);
+    color: var(--white);
+    border: none;
+    padding: 15px 40px;
+    font-size: 18px;
+    font-weight: 700;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: var(--white);
+    color: var(--pastel-pink);
+}
+
+/* Problem Section */
+.problem-section {
+    background-color: var(--dark-navy);
+}
+
+.icon-teal {
+    color: var(--teal);
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+/* Solution Section */
+.solution-section {
+    background-color: #1a2634;
+}
+
+.icon-pink {
+    color: var(--pastel-pink);
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.solution-visual {
+    text-align: center;
+    margin-top: 50px;
+}
+
+/* Market Section */
+.market-section {
+    background-color: var(--dark-navy);
+}
+
+.graph-container {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.graph {
+    height: 300px;
+    margin: 30px 0;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.highlight-teal {
+    color: var(--teal);
+    font-weight: 700;
+}
+
+/* Technology Section */
+.technology-section {
+    background-color: #1a2634;
+}
+
+.tech-diagram {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.diagram-container {
+    height: 300px;
+    margin: 30px 0;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+}
+
+.highlight-coral {
+    color: var(--coral);
+    font-weight: 700;
+}
+
+/* Success Section */
+.success-section {
+    background-color: var(--dark-navy);
+}
+
+.chart-container {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.bar-chart {
+    margin: 30px 0;
+}
+
+.bar {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.bar-fill {
+    height: 40px;
+    background-color: var(--pastel-pink);
+    border-radius: 5px;
+    width: 0;
+    transition: width 1.5s ease;
+}
+
+.bar-label {
+    display: inline-block;
+    margin-top: 5px;
+    font-weight: 700;
+    color: var(--yellow);
+}
+
+.caption {
+    color: var(--white);
+    font-size: 20px;
+    font-style: italic;
+}
+
+.timeline {
+    height: 100px;
+    margin-top: 50px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+}
+
+/* Team Section */
+.team-section {
+    background-color: #1a2634;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.team-member {
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.team-member:hover {
+    transform: translateY(-10px);
+}
+
+.member-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    margin: 0 auto 20px;
+    border: 3px solid var(--pastel-pink);
+    overflow: hidden;
+}
+
+.member-role {
+    color: var(--pastel-pink);
+    margin-bottom: 10px;
+}
+
+/* CTA Section */
+.cta-section {
+    text-align: center;
+    background: linear-gradient(to right, var(--pastel-pink), var(--mint-green));
+    padding: 100px 10%;
+}
+
+.cta-section h2 {
+    color: var(--dark-navy);
+    margin-bottom: 30px;
+}
+
+.pulse {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Footer Section */
+footer {
+    background-color: var(--dark-navy);
+    padding: 50px 10%;
+    text-align: center;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-logo {
+    margin-bottom: 20px;
+}
+
+.social-icons {
+    margin: 20px 0;
+}
+
+.social-icons a {
+    margin: 0 10px;
+    font-size: 24px;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: var(--pastel-pink);
+}
+
+.legal {
+    margin-top: 20px;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 20px 5%;
+    }
+
+    .logo {
+        margin-bottom: 20px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    section {
+        padding: 60px 5%;
+    }
+
+    .hero {
+        height: auto;
+        padding: 100px 5%;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .column {
+        flex-basis: 100%;
+        margin-bottom: 20px;
+    }
+}
